@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Reservations.Contracts
+namespace Reservations.Business.Contracts
 {
     public interface IReservationConductor
     {

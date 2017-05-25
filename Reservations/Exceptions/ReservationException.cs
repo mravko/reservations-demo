@@ -10,8 +10,14 @@ namespace Reservations.Exceptions
         List<string> UserMessages { get; set; } = new List<string>();
 
         public ReservationException(string message)
-            : base (message)
+            : base(message)
         {
+        }
+
+        public ReservationException(List<string> userMessages)
+            : base ()
+        {
+            UserMessages = userMessages;
         }
     }
 }

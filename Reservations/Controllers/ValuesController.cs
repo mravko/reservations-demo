@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Reservations.Resources;
 using Reservations.Localization;
-using Reservations.Contracts;
+using Reservations.Business.Contracts;
 
 namespace Reservations.Controllers
 {

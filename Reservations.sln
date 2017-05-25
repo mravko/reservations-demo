@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD7BDEA4-C2E5-4DC3-B8C2-BAE734211794}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reservations", "Reservations/Reservations.csproj", "{F6B8A29B-3EBA-4177-BD40-6B9D2AFA6F89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6B8A29B-3EBA-4177-BD40-6B9D2AFA6F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B8A29B-3EBA-4177-BD40-6B9D2AFA6F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B8A29B-3EBA-4177-BD40-6B9D2AFA6F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B8A29B-3EBA-4177-BD40-6B9D2AFA6F89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6B8A29B-3EBA-4177-BD40-6B9D2AFA6F89} = {8A0C4991-9CDF-4A1C-84BB-E4EE4B6B7E48}
+	EndGlobalSection
+EndGlobal

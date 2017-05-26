@@ -24,7 +24,7 @@ namespace Reservations.Implementations.Business
                 try
                 {
                     var toSave = new ReservationDetails(date);
-                    _context.ReservationDetails.Add(toSave);
+                    _context.ReservationDetails.Add(toSave);                    
                     _context.SaveChanges();
                     transaction.Commit();
                 }

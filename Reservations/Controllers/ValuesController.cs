@@ -30,7 +30,7 @@ namespace Reservations.Controllers
             //throw new System.Exception("M");
             
             var data = _context.ReservationDetails.Find(1);
-            _reservationConductor.MakeReservationFor(new DateTime());
+            _reservationConductor.MakeReservationFor(DateTime.Today);
 
             var a = _localizationService.TranslateDataKey("value1");
             return new string[] { a };

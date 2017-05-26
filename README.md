@@ -17,4 +17,6 @@ Should provide:
 - Features
 - Front end framework (Angular or React)
 - Integration with VSTS for continuous integration and continuous delivery
+- Unit tests
+- Integration tests
 - ...

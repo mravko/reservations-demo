@@ -8,7 +8,11 @@ namespace Reservations.Database.Mappers
     {
         public void Map(ModelBuilder modelBuilder)
         {            
-            modelBuilder.Entity<ReservationDetails>().ToTable("ReservationDetails");
+            modelBuilder.Entity<ReservationDetails>()
+                .ToTable("ReservationDetails")
+                .HasKey(x=>x.Id);
+
+            modelBuilder.Entity<ReservationDetails>().Property(t => t.Date).IsRequired();
         }
     }
 }

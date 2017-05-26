@@ -4,7 +4,7 @@ using Reservations.Exceptions;
 using Reservations.Localization;
 using System;
 
-namespace Reservations.Business
+namespace Reservations.Implementations.Business
 {
     public class ReservationConductor : IReservationConductor
     {
@@ -23,7 +23,8 @@ namespace Reservations.Business
             {
                 try
                 {
-                    _context.Add(new ReservationDetails(date));
+                    var toSave = new ReservationDetails(date);
+                    _context.ReservationDetails.Add(toSave);
                     _context.SaveChanges();
                     transaction.Commit();
                 }

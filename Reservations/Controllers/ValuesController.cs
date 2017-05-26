@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Localization;
-using Reservations.Resources;
 using Reservations.Localization;
 using Reservations.Business.Contracts;
 
@@ -23,6 +21,7 @@ namespace Reservations.Controllers
             _localizationService = localizationService;
             _reservationConductor = reservationConductor;
         }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -31,7 +30,7 @@ namespace Reservations.Controllers
             //throw new System.Exception("M");
             
             var data = _context.ReservationDetails.Find(1);
-            _reservationConductor.MakeReservationFor(new DateTime());
+            _reservationConductor.MakeReservationFor(DateTime.Today);
 
             var a = _localizationService.TranslateDataKey("value1");
             return new string[] { a };

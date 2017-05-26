@@ -6,4 +6,5 @@ Should provide:
 - Integration with Identity Server
 - General logging
 - Features
+- Front end framework (Angular or React)
 - ...

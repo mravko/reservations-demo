@@ -13,6 +13,7 @@ namespace Reservations.Database.Mappers
                 .HasKey(x=>x.Id);
 
             modelBuilder.Entity<ReservationDetails>().Property(t => t.Date).IsRequired();
+            modelBuilder.Entity<ReservationDetails>().Property(t => t.Title).IsRequired();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Reservations.Localization;
 using Reservations.Business.Contracts;
+using Reservations.DTOs;
 
 namespace Reservations.Controllers
 {
@@ -30,6 +31,10 @@ namespace Reservations.Controllers
             //throw new System.Exception("M");
             
             var data = _context.ReservationDetails.Find(1);
+
+            var reservationDetailsDto = new ReservationDetailsDto(data);
+            reservationDetailsDto.Translate(x => x.Title);
+
             _reservationConductor.MakeReservationFor(DateTime.Today);
 
             var a = _localizationService.TranslateDataKey("value1");

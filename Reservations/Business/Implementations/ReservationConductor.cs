@@ -4,7 +4,7 @@ using Reservations.Exceptions;
 using Reservations.Localization;
 using System;
 
-namespace Reservations.Business
+namespace Reservations.Implementations.Business
 {
     public class ReservationConductor : IReservationConductor
     {

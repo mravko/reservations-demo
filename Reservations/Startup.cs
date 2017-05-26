@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Reservations.Middleware;
 using Reservations.Localization;
 using Microsoft.EntityFrameworkCore;
+using Reservations.Business.ContainerSetup;
 
 namespace Reservations
 {
@@ -35,6 +36,8 @@ namespace Reservations
             services.AddMvc();
             
             services.AddDbContext<ReservationsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.RegisterScopedServices();
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

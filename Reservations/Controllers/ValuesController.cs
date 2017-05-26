@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Localization;
-using Reservations.Resources;
 using Reservations.Localization;
 using Reservations.Business.Contracts;
 
@@ -23,6 +21,7 @@ namespace Reservations.Controllers
             _localizationService = localizationService;
             _reservationConductor = reservationConductor;
         }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()

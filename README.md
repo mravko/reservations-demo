@@ -1,17 +1,17 @@
 # reservations-demo
 Demo framework for ASP.NET Core and EF Core
 
-Should provide:
+To do:
 
-- Setup of ASP.NET Core Web Api 1.1
-- Setup of EF Core to Sql Server
-- Localization
-- Multiple layers
-- Domain Driven Design
-- Dependency Injection
-- Exception handling
-- Keep Alive
-- EF Migrations
+- <s>Setup of ASP.NET Core Web Api 1.1</s>
+- <s>Setup of EF Core to Sql Server</s>
+- <s>Localization</s>
+- <s>Multiple layers</s>
+- <s>Domain Driven Design</s>
+- <s>Dependency Injection</s>
+- <s>Exception handling</s>
+- <s>Keep Alive</s>
+- <s>EF Migrations</s>
 - Integration with Identity Server
 - Logging
 - Features

@@ -8,9 +8,10 @@ using Reservations;
 namespace Reservations.Migrations
 {
     [DbContext(typeof(ReservationsContext))]
-    partial class ReservationsContextModelSnapshot : ModelSnapshot
+    [Migration("20170527171503_AddingTitleColumn")]
+    partial class AddingTitleColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")

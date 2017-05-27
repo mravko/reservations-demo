@@ -25,20 +25,15 @@ namespace Reservations.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public JsonResult Get()
         {
-            //throw new ReservationException("AAA");
-            //throw new System.Exception("M");
-            
             var data = _context.ReservationDetails.Find(1);
 
             var reservationDetailsDto = new ReservationDetailsDto(data);
-            reservationDetailsDto.Translate(x => x.Title);
 
-            _reservationConductor.MakeReservationFor(DateTime.Today);
-
-            var a = _localizationService.TranslateDataKey("value1");
-            return new string[] { a };
+            var reservation = _reservationConductor.MakeReservationFor(DateTime.Today, "some title");
+            
+            return new JsonResult(reservation);
         }
 
         // GET api/values/5

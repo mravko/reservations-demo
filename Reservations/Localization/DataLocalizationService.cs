@@ -8,7 +8,6 @@ namespace Reservations.Localization
     {
         void SetupLocalization(HttpContext context);
         string TranslateSystemKey(string key);
-        string TranslateDataKey(string key);
     }
 
     public class DataLocalizationService : ILocalizationService
@@ -28,11 +27,6 @@ namespace Reservations.Localization
         public string TranslateSystemKey(string key)
         {
             return _localizer[key].Value;
-        }
-
-        public string TranslateDataKey(string key)
-        {
-            return "data_" + key;
         }
     }
 }

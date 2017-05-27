@@ -1,19 +1,19 @@
 ﻿using Reservations.Database.Entities;
-using Reservations.Localization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Reservations.DTOs
 {
-    public class ReservationDetailsDto : LocalizationDto
+    public class ReservationDetailsDto
     {
         public ReservationDetailsDto(ReservationDetails reservationDetails)
         {
             Title = reservationDetails.Title;
+            Date = reservationDetails.Date;
+            Id = reservationDetails.Id;
         }
 
         public string Title { get; set; }
+        public DateTime Date { get; set; }
+        public int Id { get; set; }
     }
 }

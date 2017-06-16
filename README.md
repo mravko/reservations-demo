@@ -19,5 +19,5 @@ To do:
 - Integration with VSTS for continuous integration and continuous delivery
 - Unit tests
 - Integration tests
-- API Documentation
+- API Documentation using The OpenAPI Specification
 - ...

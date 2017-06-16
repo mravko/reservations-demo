@@ -24,8 +24,17 @@ namespace Reservations.Controllers
         }
 
         // GET api/values
+        /// <summary>
+        /// This is an xml comment from the code
+        /// </summary>
+        /// <remarks>
+        /// This is a remark comment on the method
+        ///  
+        /// * Note something here for implementation purposes *    
+        /// 
+        /// </remarks>
         [HttpGet]
-        public JsonResult Get()
+        public IActionResult Get()
         {
             var data = _context.ReservationDetails.Find(1);
 
@@ -33,7 +42,7 @@ namespace Reservations.Controllers
 
             var reservation = _reservationConductor.MakeReservationFor(DateTime.Today, "some title");
             
-            return new JsonResult(reservation);
+            return Ok(reservation);
         }
 
         // GET api/values/5

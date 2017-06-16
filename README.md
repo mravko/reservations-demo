@@ -9,7 +9,7 @@ To do:
 - <s>Multiple layers</s>
 - <s>Domain Driven Design</s>
 - <s>Dependency Injection</s>
-- <s>Exception handling</s>
+- <s>Global exception handling</s>
 - <s>Keep Alive</s>
 - <s>EF Migrations</s>
 - Integration with Identity Server

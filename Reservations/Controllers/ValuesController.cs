@@ -34,6 +34,7 @@ namespace Reservations.Controllers
         /// 
         /// </remarks>
         [HttpGet]
+        [ProducesResponseType(typeof(ReservationDetailsDto), 200)]
         public IActionResult Get()
         {
             var data = _context.ReservationDetails.Find(1);

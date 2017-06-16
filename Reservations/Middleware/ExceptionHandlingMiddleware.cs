@@ -32,7 +32,7 @@ namespace Reservations.Middleware
                 context.Response.ContentType = "application/json";
                 var json = JsonConvert.SerializeObject(new
                 {
-                    message = e.Message
+                    messages = e.UserMessages
                 });
 
                 await context.Response.WriteAsync(json);

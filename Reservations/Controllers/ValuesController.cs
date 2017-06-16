@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Reservations.Localization;
 using Reservations.Business.Contracts;
+using Reservations.DTOs;
 
 namespace Reservations.Controllers
 {
@@ -23,17 +24,25 @@ namespace Reservations.Controllers
         }
 
         // GET api/values
+        /// <summary>
+        /// This is an xml comment from the code
+        /// </summary>
+        /// <remarks>
+        /// This is a remark comment on the method
+        ///  
+        /// * Note something here for implementation purposes *    
+        /// 
+        /// </remarks>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            //throw new ReservationException("AAA");
-            //throw new System.Exception("M");
-            
             var data = _context.ReservationDetails.Find(1);
-            _reservationConductor.MakeReservationFor(DateTime.Today);
 
-            var a = _localizationService.TranslateDataKey("value1");
-            return new string[] { a };
+            var reservationDetailsDto = new ReservationDetailsDto(data);
+
+            var reservation = _reservationConductor.MakeReservationFor(DateTime.Today, "some title");
+            
+            return Ok(reservation);
         }
 
         // GET api/values/5

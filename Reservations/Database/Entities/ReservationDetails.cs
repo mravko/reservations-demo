@@ -9,12 +9,14 @@ namespace Reservations.Database.Entities
 
         }
 
-        public ReservationDetails(DateTime date)
+        public ReservationDetails(DateTime date, string title)
         {
             Date = date;
+            Title = title;
         }
 
         public int Id { get; set; }
         public DateTime Date { get; set; }
+        public string Title { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using Reservations.DTOs;
 
 namespace Reservations.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/values", Name = "ValuesRoute")]
     public class ValuesController : Controller
     {
         private readonly ILocalizationService _localizationService;
@@ -55,20 +55,30 @@ namespace Reservations.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]string value)
         {
+            //if(String.IsNullOrEmpty(value))
+            //{
+            //    return BadRequest();
+            //}
+
+            //this will return 201 that is created
+            //and add a location header that will point to the newley created attribute
+            return CreatedAtRoute("ValuesRoute", new { id = 1 }, new { value = "created: "  + value });
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put(int id, [FromBody]string value)
         {
+            return new NoContentResult();
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            return new NoContentResult();
         }
     }
 }
